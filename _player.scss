@@ -1,0 +1,123 @@
+/** @format */
+
+.contents-two {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.padding-two {
+  padding: 0 10%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.player-img {
+  margin-top: 8rem;
+  width: 700px;
+  height: 650px;
+}
+.player-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img-text {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem 0;
+  width: 30rem;
+  margin-right: 12rem;
+}
+.img-text h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  margin-top: 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 0;
+  width: 80%;
+}
+.img-text span {
+  display: inline-block;
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: rgb(73, 73, 73);
+  padding: 1.5rem 0 2rem;
+}
+
+@media screen and (max-width: 1725px) {
+  .player-img {
+    margin-top: 8rem;
+    width: 600px;
+    height: 650px;
+  }
+  .img-text {
+    margin-right: 0rem;
+  }
+}
+@media screen and (max-width: 1384px) {
+  .contents-two {
+    min-height: 50vh;
+  }
+  .padding-two {
+    height: 100%;
+  }
+  .img-text h3 {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .img-text span {
+    font-size: 0.95rem;
+    width: 100%;
+  }
+  .img-text {
+    margin-top: 0rem;
+    position: static;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-right: 0rem;
+  }
+  .player-img {
+    width: 30rem;
+    height: 20rem;
+    margin: 8rem auto 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contents-two {
+    min-height: 60vh;
+  }
+  .padding-two {
+    padding: 0 5%;
+  }
+
+  .img-text h3 {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .img-text span {
+    display: inline-block;
+    font-size: 0.85rem;
+    width: 100%;
+    padding: 1rem 0 1rem;
+  }
+  .img-text {
+    margin-top: 0rem;
+    position: static;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .player-img {
+    width: 30rem;
+    height: 20rem;
+    margin: 2rem auto 0;
+  }
+}

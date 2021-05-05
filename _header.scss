@@ -1,0 +1,154 @@
+/** @format */
+
+.conatiner {
+  width: 100%;
+  height: 100vh;
+}
+.contents {
+  background: url("./images/desktop/image-hero.jpg") no-repeat center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+.nav-bar {
+  padding-top: 0.5rem;
+  font-family: "Alata", sans-serif;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar .nav ul {
+  display: flex;
+}
+.nav-bar .nav ul li {
+  padding: 0.5rem 1rem;
+  list-style: none;
+  outline: 0;
+  transition: 0.2s;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: "";
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: 0.5s;
+  }
+}
+.nav ul li:hover,
+.nav ul li:focus {
+  color: rgb(241, 241, 241);
+}
+
+.nav ul li:hover::after,
+.nav ul li:focus:after {
+  background-color: aliceblue;
+  width: 100%;
+  transition: 0.5s;
+}
+.padding {
+  padding: 0 12%;
+}
+.border-text {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-60%);
+  color: white;
+  max-width: 40rem;
+  border: 1px solid white;
+}
+.border-text h2 {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5rem;
+  font-weight: 200;
+  margin: 3rem 1rem;
+}
+.nav-icon {
+  display: none;
+}
+@media screen and (max-width: 755px) {
+  .border-text {
+    width: 80%;
+
+    border: 1px solid white;
+  }
+  .border-text h2 {
+    font-size: 3.8rem;
+
+    padding: 0.8rem;
+  }
+  .nav-icon {
+    position: fixed;
+    right: 5rem;
+    top: 2.5rem;
+    z-index: 5000;
+    display: inline-block;
+
+    cursor: pointer;
+    .line {
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      margin: 0.2rem;
+      width: 19px;
+      height: 2px;
+      background-color: white;
+      transition: 0.8s ease-in-out;
+    }
+    .line.active:nth-child(3) {
+      opacity: 0;
+    }
+    .line.active:nth-child(1) {
+      transform: rotate(45deg);
+      width: 28px;
+    }
+    .line.active:nth-child(2) {
+      transform: rotate(-45deg);
+      width: 17px;
+    }
+  }
+  .nav {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: -20rem;
+    top: 0rem;
+    background-color: black;
+    z-index: 1000;
+    transition: 1s ease-in-out;
+    ul {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+  .nav-active {
+    right: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .border-text {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid white;
+  }
+  .border-text h2 {
+    font-size: 2.2rem;
+    margin: 1rem;
+    padding: 0.8rem;
+    font-weight: 300;
+  }
+}
